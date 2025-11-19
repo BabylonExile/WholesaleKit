@@ -1,0 +1,402 @@
+[
+  {
+    "id": 1,
+    "name_ru": "Миндальное мороженое",
+    "name_en": "Almond Ice Cream"
+  },
+  {
+    "id": 2,
+    "name_ru": "Кислый ананас",
+    "name_en": "Ananas Shock"
+  },
+  {
+    "id": 3,
+    "name_ru": "Кислое яблоко",
+    "name_en": "Apple Shock"
+  },
+  {
+    "id": 4,
+    "name_ru": "<Банан>",
+    "name_en": "Bananini"
+  },
+  {
+    "id": 5,
+    "name_ru": "Кислый барбарис",
+    "name_en": "Barberry Shock"
+  },
+  {
+    "id": 6,
+    "name_ru": "Базилик",
+    "name_en": "Basilic"
+  },
+  {
+    "id": 7,
+    "name_ru": "Ягодный лимонад",
+    "name_en": "Berry lemonade"
+  },
+  {
+    "id": 8,
+    "name_ru": "Ежевичный лимонад",
+    "name_en": "BlackBerry Lemonade"
+  },
+  {
+    "id": 9,
+    "name_ru": "Кола",
+    "name_en": "Blackcola"
+  },
+  {
+    "id": 10,
+    "name_ru": "Голубика",
+    "name_en": "Blueberry"
+  },
+  {
+    "id": 11,
+    "name_ru": "Виноград мята",
+    "name_en": "Grape Mint"
+  },
+  {
+    "id": 12,
+    "name_ru": "Шоколадный дессерт",
+    "name_en": "Brownie"
+  },
+  {
+    "id": 13,
+    "name_ru": "Фруктовая жвачка",
+    "name_en": "Bubblegum"
+  },
+  {
+    "id": 14,
+    "name_ru": "Тростниковая мята",
+    "name_en": "Cane mint"
+  },
+  {
+    "id": 15,
+    "name_ru": "Чизкейк",
+    "name_en": "Cheesecake"
+  },
+  {
+    "id": 16,
+    "name_ru": "Черешневый сок",
+    "name_en": "Cherry Garden"
+  },
+  {
+    "id": 17,
+    "name_ru": "Кислая вишня",
+    "name_en": "Cherry Shock"
+  },
+  {
+    "id": 18,
+    "name_ru": "Виноградный чупа-чупс",
+    "name_en": "Chupa Graper "
+  },
+  {
+    "id": 19,
+    "name_ru": "Кислая клюква",
+    "name_en": "Cranberry Shock"
+  },
+  {
+    "id": 20,
+    "name_ru": "Десерт крем-брюле",
+    "name_en": "Creme Brulee"
+  },
+  {
+    "id": 21,
+    "name_ru": "Сочное манго",
+    "name_en": "Ekzo Mango"
+  },
+  {
+    "id": 22,
+    "name_ru": "Кислая бузина",
+    "name_en": "Elderberry Shock"
+  },
+  {
+    "id": 23,
+    "name_ru": "Черничный йогурт",
+    "name_en": "Epic Yogurt"
+  },
+  {
+    "id": 24,
+    "name_ru": "Медовая дыня",
+    "name_en": "Etalon Melon"
+  },
+  {
+    "id": 25,
+    "name_ru": "Ледяное зеленое яблоко",
+    "name_en": "Famous Apple"
+  },
+  {
+    "id": 26,
+    "name_ru": "Варенье из фейхоа",
+    "name_en": "Feijoa Jam"
+  },
+  {
+    "id": 27,
+    "name_ru": "Терпкий гранат",
+    "name_en": "Garnet"
+  },
+  {
+    "id": 28,
+    "name_ru": "Кислый крыжовник",
+    "name_en": "Gooseberry Shock"
+  },
+  {
+    "id": 29,
+    "name_ru": "Виноград мята",
+    "name_en": "Grape Mint"
+  },
+  {
+    "id": 30,
+    "name_ru": "Грейпфрут",
+    "name_en": "Grapefruit"
+  },
+  {
+    "id": 31,
+    "name_ru": "Зеленый чай",
+    "name_en": "Green Tea"
+  },
+  {
+    "id": 32,
+    "name_ru": "Мармелад-кола",
+    "name_en": "Haribon"
+  },
+  {
+    "id": 33,
+    "name_ru": "Ягодный сорбет с грейпфрутом",
+    "name_en": "Ice Baby"
+  },
+  {
+    "id": 34,
+    "name_ru": "Арктический лед",
+    "name_en": "Iceberg"
+  },
+  {
+    "id": 35,
+    "name_ru": "Тропический смузи",
+    "name_en": "Juicy Smoothie"
+  },
+  {
+    "id": 36,
+    "name_ru": "Смузи из киви",
+    "name_en": "KiwiStoner"
+  },
+  {
+    "id": 37,
+    "name_ru": "Ультракислый лимон",
+    "name_en": "Lemon Shock"
+  },
+  {
+    "id": 38,
+    "name_ru": "Лимонные леденцы",
+    "name_en": "Lemon Sweets"
+  },
+  {
+    "id": 39,
+    "name_ru": "Лимонные вафли",
+    "name_en": "Lemon Waffles"
+  },
+  {
+    "id": 40,
+    "name_ru": "Кислый лайм",
+    "name_en": "Lime Shock"
+  },
+  {
+    "id": 41,
+    "name_ru": "Луло",
+    "name_en": "Lulo"
+  },
+  {
+    "id": 42,
+    "name_ru": "Леденец малибу",
+    "name_en": "Malibu"
+  },
+  {
+    "id": 43,
+    "name_ru": "Дынный холлс",
+    "name_en": "Melon Halls"
+  },
+  {
+    "id": 44,
+    "name_ru": "Мандариновая газировка",
+    "name_en": "Mirinda"
+  },
+  {
+    "id": 45,
+    "name_ru": "Шоколадно ореховая паста",
+    "name_en": "Nutella"
+  },
+  {
+    "id": 46,
+    "name_ru": "Яркая папайя",
+    "name_en": "Papaya v Obed"
+  },
+  {
+    "id": 47,
+    "name_ru": "Бархатный персик",
+    "name_en": "Peach Killer"
+  },
+  {
+    "id": 48,
+    "name_ru": "Персиковый йогурт",
+    "name_en": "Peach Yogurt"
+  },
+  {
+    "id": 49,
+    "name_ru": "Земляника и персик",
+    "name_en": "Peachberry"
+  },
+  {
+    "id": 50,
+    "name_ru": "Грушевый лимонад",
+    "name_en": "Pear Lemonade"
+  },
+  {
+    "id": 51,
+    "name_ru": "Пина-колада",
+    "name_en": "Pina Colada"
+  },  {
+  "id": 52,
+  "name_ru": "Ананасовый йогурт",
+  "name_en": "Pineapple Yogurt"
+},
+  {
+    "id": 53,
+    "name_ru": "Сочный ананас",
+    "name_en": "Pineapple"
+  },
+  {
+    "id": 54,
+    "name_ru": "Фисташковое мороженое",
+    "name_en": "Pistachio Ice Snow"
+  },
+  {
+  "id": 55,
+  "name_ru": "Помело",
+  "name_en": "Pomelo"
+  },
+  {
+    "id": 56,
+    "name_ru": "Лесная малина",
+    "name_en": "Raspberries"
+  },
+  {
+    "id": 57,
+    "name_ru": "Кислая малина",
+    "name_en": "Raspberry Shock"
+  },
+  {
+    "id": 58,
+    "name_ru": "Настоящая маракуйя",
+    "name_en": "Real P.F."
+  },
+  {
+    "id": 59,
+    "name_ru": "Красная смородина",
+    "name_en": "It's Not Black Currant"
+  },
+  {
+    "id": 60,
+    "name_ru": "Красный киви",
+    "name_en": "Red Kiwi"
+  },
+  {
+    "id": 61,
+    "name_ru": "Красный апельсин",
+    "name_en": "Red Orange"
+  },
+  {
+    "id": 62,
+    "name_ru": "Микс манго-маракуйя",
+    "name_en": "Rising Star"
+  },
+  {
+    "id": 63,
+    "name_ru": "Змеиный фрукт",
+    "name_en": "Salak"
+  },
+  {
+    "id": 64,
+    "name_ru": "Кислая черная смородина",
+    "name_en": "Shock, Currant Shock"
+  },
+  {
+    "id": 65,
+    "name_ru": "Лимонад байкал",
+    "name_en": "Siberian Soda"
+  },
+  {
+    "id": 66,
+    "name_ru": "Скитлз",
+    "name_en": "Skittles"
+  },
+  {
+    "id": 67,
+    "name_ru": "Ягодный микс",
+    "name_en": "Something Berry"
+  },
+  {
+    "id": 68,
+    "name_ru": "Что-то тропическое",
+    "name_en": "Something Tropical"
+  },
+  {
+    "id": 69,
+    "name_ru": "Зеленый лимонад",
+    "name_en": "SouSep"
+  },
+  {
+    "id": 70,
+    "name_ru": "Клубника кокос эвкалипт",
+    "name_en": "Strawberry Coconut "
+  },
+
+  {
+    "id": 71,
+    "name_ru": "Клубничный джем",
+    "name_en": "Strawberry Jam"
+  },
+  {
+    "id": 72,
+    "name_ru": "Ягодная корзина",
+    "name_en": "Summer Basket"
+  },
+  {
+    "id": 73,
+    "name_ru": "Цитрусовый микс",
+    "name_en": "Sundaysun"
+  },
+  {
+    "id": 74,
+    "name_ru": "Драже из детства",
+    "name_en": "Tik Tak "
+  },
+  {
+    "id": 75,
+    "name_ru": "Сладкий арбуз",
+    "name_en": "Watermelon"
+  },
+  {
+    "id": 76,
+    "name_ru": "Белый виноград",
+    "name_en": "White Grape"
+  },
+  {
+    "id": 77,
+    "name_ru": "Елка",
+    "name_en": "Xlka"
+  },
+  {
+    "id": 78,
+    "name_ru": "Что-то тропическое",
+    "name_en": "Something Tropical"
+  },
+  {
+    "id": 79,
+    "name_ru": "На расслабоне",
+    "name_en": "XmNaRasslabone"
+  },
+  {
+    "id": 80,
+    "name_ru": "На чиле",
+    "name_en": "YmNaChile"
+  }
+]
