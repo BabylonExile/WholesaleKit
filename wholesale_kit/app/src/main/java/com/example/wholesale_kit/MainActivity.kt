@@ -15,6 +15,10 @@ import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import com.google.mlkit.vision.common.InputImage
+import com.google.mlkit.vision.text.Text
+import com.google.mlkit.vision.text.TextRecognition
+import com.google.mlkit.vision.text.latin.TextRecognizerOptions
 
 class MainActivity : AppCompatActivity() {
 
@@ -24,6 +28,8 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var requestCameraPermissionLauncher: ActivityResultLauncher<String>
     private lateinit var takePictureResultLauncher: ActivityResultLauncher<Intent>
+
+    private var lastPhoto: Bitmap? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,8 +47,9 @@ class MainActivity : AppCompatActivity() {
                 val data: Intent? = result.data
                 val photo = data?.extras?.get("data") as? Bitmap
                 if (photo != null) {
+                    lastPhoto = photo
                     imageView.setImageBitmap(photo)
-                    tvResult.text = "Фото сделано, OCR подключим на следующем шаге"
+                    recognizeTextFromImage(photo)   // <-- здесь запускаем OCR
                 } else {
                     tvResult.text = "Не удалось получить фото"
                 }
@@ -96,5 +103,27 @@ class MainActivity : AppCompatActivity() {
         } else {
             tvResult.text = "Приложение камеры не найдено"
         }
+    }
+
+    // ---- OCR (ML Kit) ----
+
+    private fun recognizeTextFromImage(bitmap: Bitmap) {
+        tvResult.text = "Распознавание текста..."
+
+        val image = InputImage.fromBitmap(bitmap, 0)
+        val recognizer = TextRecognition.getClient(TextRecognizerOptions.DEFAULT_OPTIONS)
+
+        recognizer.process(image)
+            .addOnSuccessListener { visionText: Text ->
+                val recognizedText = visionText.text
+                if (recognizedText.isBlank()) {
+                    tvResult.text = "Текст не найден"
+                } else {
+                    tvResult.text = "Распознанный текст:\n\n$recognizedText"
+                }
+            }
+            .addOnFailureListener { e ->
+                tvResult.text = "Ошибка распознавания: ${e.message}"
+            }
     }
 }
