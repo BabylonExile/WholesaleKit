@@ -28,6 +28,7 @@ import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 import androidx.exifinterface.media.ExifInterface
+import android.graphics.Matrix
 
 private fun getRotationDegrees(path: String): Int {
     return try {
@@ -75,8 +76,9 @@ class MainActivity : AppCompatActivity() {
                     // Загружаем фото из файла, уменьшая до ~1600x1600
                     val bitmap = decodeSampledBitmapFromFile(path, 1600, 1600)
                     if (bitmap != null) {
-                        imageView.setImageBitmap(bitmap)
-                        recognizeTextFromImage(bitmap, path)
+                        val rotated = rotateBitmapIfNeeded(bitmap, path)
+                        imageView.setImageBitmap(rotated)
+                        recognizeTextFromImage(rotated, path)
                     } else {
                         tvResult.text = "Не удалось загрузить фото"
                     }
@@ -148,7 +150,24 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    // Переворачиваем изображение
+    private fun rotateBitmapIfNeeded(bitmap: Bitmap, photoPath: String): Bitmap {
+        val rotation = getRotationDegrees(photoPath)
+        if (rotation == 0) return bitmap
 
+        val matrix = Matrix().apply {
+            postRotate(rotation.toFloat())
+        }
+        return Bitmap.createBitmap(
+            bitmap,
+            0,
+            0,
+            bitmap.width,
+            bitmap.height,
+            matrix,
+            true
+        )
+    }
 
     // Создаём временный файл для фото
     private fun createImageFile(): File? {
@@ -233,7 +252,7 @@ class MainActivity : AppCompatActivity() {
                     sb.append(cleaned)
                     sb.append("\n\nОпределённый вкус:\n")
 
-                    val threshold = 0.3  // порог уверенности
+                    val threshold = 0.5  // порог уверенности
 
                     if (bestFlavor != null && score >= threshold) {
                         sb.append("${bestFlavor.name_ru} / ${bestFlavor.name_en}")
@@ -341,10 +360,17 @@ class MainActivity : AppCompatActivity() {
             val nameRu = flavor.name_ru.lowercase()
             val nameEn = flavor.name_en.lowercase()
 
-            val scoreRu = bestWordSimilarity(cleaned, nameRu)
-            val scoreEn = bestWordSimilarity(cleaned, nameEn)
+            // 1) похожесть по словам (как было)
+            val wordScoreRu = bestWordSimilarity(cleaned, nameRu)
+            val wordScoreEn = bestWordSimilarity(cleaned, nameEn)
 
-            val score = maxOf(scoreRu, scoreEn)
+            // 2) похожесть всей строки OCR к полному английскому названию
+            val phraseScoreEn = similarity(cleaned, nameEn)
+
+            // итоговый скор: максимум между RU/EN слов + учитываем фразу EN
+            // можно по‑простому усреднить:
+            val combinedEn = (wordScoreEn + phraseScoreEn) / 2.0
+            val score = maxOf(wordScoreRu, combinedEn)
 
             if (score > bestScore) {
                 bestScore = score
